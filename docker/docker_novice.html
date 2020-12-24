@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker入门学习 | 笔记📒</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="笔记📒">
+    <link rel="preload" href="/yangyang61.github.io/assets/css/0.styles.c335935a.css" as="style"><link rel="preload" href="/yangyang61.github.io/assets/js/app.17564d77.js" as="script"><link rel="preload" href="/yangyang61.github.io/assets/js/2.7177288a.js" as="script"><link rel="preload" href="/yangyang61.github.io/assets/js/8.4d81e70f.js" as="script"><link rel="prefetch" href="/yangyang61.github.io/assets/js/10.d8def3a1.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/11.076d648c.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/12.06205a61.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/13.9f97f47d.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/14.6c2fd758.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/15.3d8f7763.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/16.e6a25457.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/3.b39f9a6f.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/4.48afdbac.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/5.1b08cf7d.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/6.548be5d1.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/7.62b7574b.js"><link rel="prefetch" href="/yangyang61.github.io/assets/js/9.6d92db8d.js">
+    <link rel="stylesheet" href="/yangyang61.github.io/assets/css/0.styles.c335935a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/yangyang61.github.io/" class="home-link router-link-active"><!----> <span class="site-name">笔记📒</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/yangyang61.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础" class="dropdown-title"><span class="title">基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yangyang61.github.io/js/Javascript.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/yangyang61.github.io/html/" class="nav-link">
+  HTML
+</a></li></ul></div></div><div class="nav-item"><a href="/yangyang61.github.io/docker/docker_novice.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Docker
+</a></div><div class="nav-item"><a href="https://github.com/yangyang61" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/yangyang61.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础" class="dropdown-title"><span class="title">基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yangyang61.github.io/js/Javascript.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/yangyang61.github.io/html/" class="nav-link">
+  HTML
+</a></li></ul></div></div><div class="nav-item"><a href="/yangyang61.github.io/docker/docker_novice.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Docker
+</a></div><div class="nav-item"><a href="https://github.com/yangyang61" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/yangyang61.github.io/docker/docker_novice.html" aria-current="page" class="active sidebar-link">docker_novice</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/yangyang61.github.io/docker/docker_novice.html#docker-介绍" class="sidebar-link">Docker 介绍</a></li><li class="sidebar-sub-header"><a href="/yangyang61.github.io/docker/docker_novice.html#docker-是什么" class="sidebar-link">Docker 是什么</a></li><li class="sidebar-sub-header"><a href="/yangyang61.github.io/docker/docker_novice.html#docker-的作用" class="sidebar-link">Docker 的作用</a></li><li class="sidebar-sub-header"><a href="/yangyang61.github.io/docker/docker_novice.html#docker-安装" class="sidebar-link">Docker 安装</a></li><li class="sidebar-sub-header"><a href="/yangyang61.github.io/docker/docker_novice.html#image-镜像" class="sidebar-link">Image 镜像</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker入门学习"><a href="#docker入门学习" class="header-anchor">#</a> Docker入门学习</h1> <p><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="http://www.dockerinfo.net/document" target="_blank" rel="noopener noreferrer">Docker 中文文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>2013年发布至今， <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 一直广受瞩目，被认为可能会改变软件行业。
+但是，许多人并不清楚 Docker 到底是什么，要解决什么问题，好处又在哪里？</p> <h2 id="docker-介绍"><a href="#docker-介绍" class="header-anchor">#</a> Docker 介绍</h2> <p>Docker 是一个开源项目，诞生于2013年初，最初是 dotCloud 公司内部的一个业余项目。它基于 Google 公司推出的 Go 语言实现。项目后来加入了 Linux 基金会，遵从了 Apache 2.0 协议，项目代码在 <a href="http://github.com/" target="_blank" rel="noopener noreferrer">GitHub<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 上进行维护</p> <h2 id="docker-是什么"><a href="#docker-是什么" class="header-anchor">#</a> Docker 是什么</h2> <p>Docker 属于 <strong>Linux</strong> 容器的一种封装，提供简单易用的容器使用接口。它是目前最流行 Linux 容器解决方案。Docker 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。有了 Docker，就不用担心环境问题。Docker 的接口相当简单， 用户可以方便地创建和使用容器，把自己的应用放入容器。容器还可以进行版本管理、复制、分享、修改，就行管理普通的代码一样。</p> <h2 id="docker-的作用"><a href="#docker-的作用" class="header-anchor">#</a> Docker 的作用</h2> <p>Docker 的主要用途，目前有三大类</p> <ul><li>提供一次性的环境。比如，本地测试他人的软件、持续集成的时候提供单元测试和构建的环境。</li> <li>提供弹性的云服务。因为 Docker 容器可以随开随关，很适合动态扩容和缩容</li> <li>组件微服务架构。通过多个容器，一台机器可以跑多个服务，因此在本机就可以模拟出微服务架构。</li></ul> <h2 id="docker-安装"><a href="#docker-安装" class="header-anchor">#</a> Docker 安装</h2> <p>官网安装教程</p> <ul><li><a href="https://docs.docker.com/docker-for-mac/install/" target="_blank" rel="noopener noreferrer">Mac<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://docs.docker.com/docker-for-windows/install/" target="_blank" rel="noopener noreferrer">Windows<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noopener noreferrer">Ubuntu<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://docs.docker.com/engine/install/centos/" target="_blank" rel="noopener noreferrer">CentOS<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://docs.docker.com/engine/install/binaries/" target="_blank" rel="noopener noreferrer">Linux<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <p>安装完成后，运行下面的命令，验证是否安装成功。</p> <div class="language-shell script extra-class"><pre class="language-shell"><code>$ docker version
+<span class="token comment"># or</span>
+$ docker info
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 启动 并设置为开机自动启动</span>
+<span class="token comment"># 启动Docker服务</span>
+$ systemctl start docker
+<span class="token comment"># 设置开机自动启动</span>
+$ systemctl <span class="token builtin class-name">enable</span> docker
+<span class="token comment"># 测试</span>
+$ docker run hello-world
+</code></pre></div><p>Docker 需要用户具有 sudo 权限，为了避免每次命令都 sudo， 可以把用户加入 Docker 用户组（<a href="https://docs.docker.com/engine/install/linux-postinstall/" target="_blank" rel="noopener noreferrer">官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>)</p> <h2 id="image-镜像"><a href="#image-镜像" class="header-anchor">#</a> Image 镜像</h2> <h3 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h3> <p>在 Docker 的术语里，一个只读层被称为镜像， 一个镜像是永久不变的。
+由于 Docker 使用一个统一文件系统，Docker 进程认为整个文件系统是以读写方式挂载的。但是所有的变更都发生顶层的可写层，而下层的原始只读镜像不可写，所有镜像是无状态的。</p> <div class="language- extra-class"><pre class="language-text"><code># 列出本机的所有 image 文件
+$ docker iamge ls
+# 删除 image 文件
+$ docker image rm [imageName]
+</code></pre></div><h3 id="镜像的操作"><a href="#镜像的操作" class="header-anchor">#</a> 镜像的操作</h3> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 1. 拉取镜像到本地</span>
+$ docker pull 镜像名称<span class="token punctuation">[</span>:tag<span class="token punctuation">]</span>
+<span class="token comment"># 举个栗子🌰</span>
+$ docker pull tomcat
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 2. 查看全部的镜像</span>
+$ docker images
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 3. 删除本地的镜像</span>
+$ docker rmi 镜像的标识
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 4. 镜像的导入导出</span>
+<span class="token comment"># 将本地的镜像导出</span>
+$ docker save -o 导出的路径 镜像ID
+<span class="token comment"># 加载本地的镜像文件</span>
+$ docker load -i 镜像文件
+<span class="token comment"># 修改镜像名称</span>
+$ docker tag 镜像ID 新镜像名称:版本
+</code></pre></div><h3 id="容器的操作"><a href="#容器的操作" class="header-anchor">#</a> 容器的操作</h3> <p><strong>image 文件生成的容器实例，本身也是一个文件，称为容器文件。</strong> 也就是说，一旦容器生成，就会同时存在两个文件： image 文件和容器文件。而且关闭容器并不会删除容器文件，只是容器停止运行而已</p> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 1. 运行容器</span>
+<span class="token comment"># 简单操作</span>
+$ docker run 镜像的标识<span class="token operator">|</span>镜像的名称<span class="token punctuation">[</span>:tag<span class="token punctuation">]</span>
+<span class="token comment"># 常用的参数</span>
+$ docker run -d -p 宿主机端口:容器端口 --name 容器名称 镜像的标识<span class="token operator">|</span>镜像名称<span class="token punctuation">[</span>:tag<span class="token punctuation">]</span>
+<span class="token comment"># -d: 代表后台运行容器</span>
+<span class="token comment"># -p 宿主机端口:容器端口: 为了映射当前Linux的端口和容器的端口</span>
+<span class="token comment"># --name 容器名称: 指定容器的名称</span>
+<span class="token comment"># 列出本机所有容器，包括终止运行的容器</span>
+$ docker container <span class="token function">ls</span> --all
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 2. 查看正在运行的容器</span>
+$ docker <span class="token function">ps</span> <span class="token punctuation">[</span>-qa<span class="token punctuation">]</span>
+<span class="token comment"># -a: 查看全部的容器，包括没有运行</span>
+<span class="token comment"># -q: 只查看容器的标识</span>
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 3. 查看容器的日志</span>
+$ docker logs -f 容器id
+<span class="token comment"># -f: 可以滚动查看日志的最后几行</span>
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 4. 进入到容器内部</span>
+$ docker <span class="token builtin class-name">exec</span> -it 容器id <span class="token function">bash</span>
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 5. 删除容器(删除容器钱，需要先停止容器)</span>
+<span class="token comment"># 停止指定容器</span>
+$ docker stop 容器id
+<span class="token comment"># 停止全部容器</span>
+$ docker stop <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -qa<span class="token variable">)</span></span>
+<span class="token comment"># 删除指定容器</span>
+$ docker <span class="token function">rm</span> 镜像id
+<span class="token comment"># 删除全部容器</span>
+$ docker <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span>docker pa -qa<span class="token variable">)</span></span>
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 6.启动容器</span>
+$ docker start 容器id
+</code></pre></div><p>有些容器不会自动终止，因为提供的是服务，比如安装运行 Ubuntu 的 image，就可以在命令行体验 Ubuntu 系统。</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker container run -it ubuntu bash
+</code></pre></div><p>对于那些不会自动终止的容器，必须使用 <code>docker container kill</code> 命令终止。(containID: 容器ID)</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker container kill [containID]
+</code></pre></div><h3 id="数据卷"><a href="#数据卷" class="header-anchor">#</a> 数据卷</h3> <p>将宿主机的一个目录映射到容器的一个目录中。可以在宿主机中操作目录中的内容，那么容器内部映射的文件，也会跟着一起改变</p> <ol><li>创建数据卷</li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment">#创建数据卷后，默认会存放在一个目录下/var/lib/docker/volumes/数据卷名称/_data</span>
+$ docker volume create 数据卷名称
+</code></pre></div><ol start="2"><li>查看全部数据卷</li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 查看全部数据卷信息</span>
+$ docker volume <span class="token function">ls</span>
+</code></pre></div><ol start="3"><li>查看数据卷详情</li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 查看数据卷的详细信息，可以查询到存放的路径，创建时间等等</span>
+$ docker volume inspect 数据卷名称
+</code></pre></div><ol start="4"><li>删除数据卷</li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 删除指定数据卷</span>
+$ docker volume <span class="token function">rm</span> 数据卷名称
+</code></pre></div><ol start="5"><li>容器映射数据卷</li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 通过数据卷名称映射，如果数据卷不存在。 Docker会自动创建，会将容器内部自带的文件，存储在默认的存放路径中</span>
+$ docker rum <span class="token punctuation">[</span>-d -p <span class="token number">8080</span>:8080 --name tomcat<span class="token punctuation">]</span> -v 数据卷名称:容器内部的路径 镜像id
+<span class="token comment"># （推荐）通过路径映射数据卷，直接指定一个路径作为数据卷的存放位置。但是这个路径下是空的</span>
+$ docker run <span class="token punctuation">[</span>-d -p <span class="token number">8080</span>:8080 --name<span class="token punctuation">]</span> tomcat -v 路径<span class="token punctuation">(</span>/root/自己创建的文件夹<span class="token punctuation">)</span>:容器内的路径 镜像id
+</code></pre></div><h3 id="dockerfile-自定义镜像"><a href="#dockerfile-自定义镜像" class="header-anchor">#</a> Dockerfile 自定义镜像</h3> <p>Dockerfile 是一个文本文件，用来配置 image。Docker 根据 该文件生成二进制的 image 文件
+Dockerfile 分为四部分：基础镜像信息、维护者信息、镜像操作指令和容器启动时执行指令。</p> <ol><li>创建 Dockerfile 文件，并指定自定义镜像信息</li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># Dockerfile 文件中常用的内容</span>
+$ from: 指定当前自定义镜像依赖的环境
+$ copy: 将相对路径下的内容复制到自定义镜像中
+$ workdir: 声明镜像的默认工作目录
+$ cmd: 需要执行的命令 ps: 在workdir下执行的, cmd 可以写多的, 只以最后一个为准
+</code></pre></div><p><strong>举个栗子🌰</strong></p> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 自定义一个Tomcat镜像，并且将 ssm.var 部署到 tomcat 中</span>
+$ from daocloud.io/library/tomcat:8.5.15-jre8
+$ copy ssm.var /usr/local/tomcat/webapps
+</code></pre></div><ol start="2"><li>将准备好的 Dockerfile 和相应的文件拖拽到Linux操作系统中，通过Docker目录制作镜像</li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code>$ docker build -t 镜像名称:<span class="token punctuation">[</span>tag<span class="token punctuation">]</span> <span class="token builtin class-name">.</span>
+</code></pre></div><h3 id="docker-compose"><a href="#docker-compose" class="header-anchor">#</a> Docker-Compose</h3> <ol><li><p>下载并安装 Docker-Compose （Linux）
+<a href="https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Linux-x86_64" target="_blank" rel="noopener noreferrer">Github下载地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>设置权限</p></li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 需要将 Docker-Compose 文件的名称修改一下，给予 Docker-Compose文件一个可执行权限</span>
+$ <span class="token function">mv</span> docker-compose-Linux-x86_64 docker-compose
+$ <span class="token function">chmod</span> <span class="token number">777</span> docker-compose
+</code></pre></div><ol start="3"><li>配置环境变量</li></ol> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 方便后期操作，配置一个环境变量</span>
+<span class="token comment"># 将docker-compose文件移动到了/usr/local/bin，修改了/etc/profile文件，给/usr/local/bin配置到了PATH中</span>
+$ <span class="token function">mv</span> docker-compose /usr/local/bin
+$ <span class="token function">vi</span> /etc/profile
+<span class="token comment"># 添加内容：export PATH=$JAVA_HOME:/usr/local/bin:$PATH</span>
+$ <span class="token builtin class-name">source</span> /etc/profile
+</code></pre></div><p>测试：在任意目录下输入 <code>docker-compose</code></p> <h3 id="docker-compose-管理-mysql-和-tomcat-容器"><a href="#docker-compose-管理-mysql-和-tomcat-容器" class="header-anchor">#</a> Docker-Compose 管理 MySQL 和 Tomcat 容器</h3> <blockquote><p>yml 文件以 key: value 方式来指定配置信息
+多个配置信息以换行+缩进的方式来区分
+在 docker-compose.yml 文件中，不要使用制表符</p></blockquote> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.1'</span>
+<span class="token key atrule">service</span><span class="token punctuation">:</span>
+    <span class="token key atrule">mysql</span><span class="token punctuation">:</span>                <span class="token comment"># 服务的名称</span>
+        <span class="token key atrule">restart</span><span class="token punctuation">:</span> always   <span class="token comment"># 代表只要docker启动，那么这个容器就跟着一起启动</span>
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> daocloud.io/library/mysql<span class="token punctuation">:</span>5.7.4   <span class="token comment"># 指定镜像的路径</span>
+        <span class="token key atrule">container_name</span><span class="token punctuation">:</span> mysql           <span class="token comment"># 指定容器名称</span>
+        <span class="token key atrule">ports</span><span class="token punctuation">:</span> 
+            <span class="token punctuation">-</span> 3306<span class="token punctuation">:</span><span class="token number">3306</span>                 <span class="token comment"># 指定端口号的映射</span>
+        <span class="token key atrule">environment</span><span class="token punctuation">:</span> 
+            <span class="token key atrule">MYSQL_ROOT_PASSWORD</span><span class="token punctuation">:</span> root   <span class="token comment"># 指定MySQL的ROOT用户密码</span>
+            <span class="token key atrule">TZ</span><span class="token punctuation">:</span> Asia/Shanghai           <span class="token comment"># 指定时区</span>
+        volumes：
+            <span class="token punctuation">-</span> /opt/docker_mysql/data<span class="token punctuation">:</span>/var/lib/mysql   <span class="token comment"># 映射数据卷</span>
+    <span class="token key atrule">tomcat</span><span class="token punctuation">:</span>
+        <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> daocloud.io/library/tomcat<span class="token punctuation">:</span>8.5.15<span class="token punctuation">-</span>jre8
+        <span class="token key atrule">container_name</span><span class="token punctuation">:</span> tomcat
+        <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> 8080<span class="token punctuation">:</span><span class="token number">8080</span>
+        <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+            <span class="token key atrule">TZ</span><span class="token punctuation">:</span> Asia/Shanghai
+        <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> /opt/docker_mysql_tomcat/tomcat_webapps<span class="token punctuation">:</span>/usr/local/tomcat/webapps
+            <span class="token punctuation">-</span> /opt/docker_mysql_tomcat/tomcat_logs<span class="token punctuation">:</span>/usr/local/tomcat/logs  
+</code></pre></div><p>使用 docker-compose 命令管理容器</p> <blockquote><p>在使用 docker-compose 的命令时，默认会在当前目录下找 docker-compose.yml 文件</p></blockquote> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 1. 基于 docker-compose.yml 启动管理的容器</span>
+$ docker-compose up -d
+</code></pre></div><hr> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 2. 关闭并删除容器</span>
+$ docker-compose down
+</code></pre></div><hr> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 3. 开启|关闭|重启已经存在的由 docker-compose 维护的容器</span>
+$ docker-compose start<span class="token operator">|</span>stop<span class="token operator">|</span>restart
+</code></pre></div><hr> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 4. 查看由 docker-compose 管理的容器</span>
+$ docker-compose <span class="token function">ps</span>
+</code></pre></div><hr> <div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 5. 查看日志</span>
+$ docker-compose logs -f
+</code></pre></div><h3 id="docker-compose-配置-dockerfile-使用"><a href="#docker-compose-配置-dockerfile-使用" class="header-anchor">#</a> docker-compose 配置 Dockerfile 使用</h3> <blockquote><p>使用 docker-compose.yml 文件以及 Dockerfile 文件在生成自定义镜像的同时启动当前镜像，并且由 docker-compose 去管理容器</p></blockquote> <p><a href="">docker-compose.yml</a></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>    <span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.1'</span>
+    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ssm</span><span class="token punctuation">:</span>
+            <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+            <span class="token key atrule">build</span><span class="token punctuation">:</span>    <span class="token comment"># 构建自定义镜像</span>
+                <span class="token key atrule">content</span><span class="token punctuation">:</span> ../    <span class="token comment"># 指定 dockerfile 文件的所在路径</span>
+                <span class="token key atrule">dockerfile</span><span class="token punctuation">:</span> Dockerfile    <span class="token comment"># 指定 Dockerfile 文件名称</span>
+            <span class="token key atrule">image</span><span class="token punctuation">:</span> ssm<span class="token punctuation">:</span>1.0.1
+            <span class="token key atrule">container_name</span><span class="token punctuation">:</span> ssm
+            <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> 8081<span class="token punctuation">:</span><span class="token number">8081</span>
+            <span class="token key atrule">entrypoint</span><span class="token punctuation">:</span> 
+                <span class="token key atrule">TZ</span><span class="token punctuation">:</span> Asia/Shanghai
+</code></pre></div><hr> <p><a href="">Dockerfile 文件</a></p> <div class="language-shell script extra-class"><pre class="language-shell"><code>$ from daocloud.io/library/mysql:5.7.4
+$ copy ssm.var /usr/local/tomcat/webapps
+</code></pre></div><div class="language-shell script extra-class"><pre class="language-shell"><code><span class="token comment"># 可以直接启动基于 docker-compose.yml 以及 Dockerfile 文件构建的自定义镜像</span>
+$ docker-compose up -d
+<span class="token comment"># 如果自定义镜像不存在，会帮助我们构建出自定义镜像，如果自定义镜像已经存在，会直接运行这个自定义镜像</span>
+<span class="token comment"># 重新构建自定义镜像</span>
+$ docker-compose build
+<span class="token comment"># 运行期，重新构建</span>
+$ docker-compose -up -d build
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/yangyang61.github.io/assets/js/app.17564d77.js" defer></script><script src="/yangyang61.github.io/assets/js/2.7177288a.js" defer></script><script src="/yangyang61.github.io/assets/js/8.4d81e70f.js" defer></script>
+  </body>
+</html>
